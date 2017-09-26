@@ -63,9 +63,9 @@ class MapController extends Component {
     // clear previous interval
     clearInterval(this.interval);
 
-    // Keep updating every 2 second
+    // Keep updating every 2 minute
 		this._updateBus();
-    this.interval = setInterval(this._updateBus, 2000);
+    this.interval = setInterval(this._updateBus, 120000);
 	}
 
 	componentWillUnmount() {
