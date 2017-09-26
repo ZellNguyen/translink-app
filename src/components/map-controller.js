@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { store } from '../reducers';
 import Map from './map';
 import request from 'superagent';
-import { updateBus, reportError } from '../actions';
+import { updateBus, reportError, load } from '../actions';
 import { connect } from 'react-redux';
 
 const TRANSLINK_KEY = process.env.REACT_APP_TRANSLINK;
@@ -37,10 +37,14 @@ class MapController extends Component {
 			.type('application/json')
 			.accept('application/json')
 			.end((err, res) => {
+        // Remove spinner
+        store.dispatch(load(false));
+
 				if(err) {
           console.log(err);
           // report error message
           store.dispatch(reportError(err));
+          store.dispatch(updateBus([]));
           return;
         }
 
@@ -60,6 +64,9 @@ class MapController extends Component {
 	}
 
 	componentDidUpdate(prevProps, prevState){
+    // Start loading
+    store.dispatch(load(true));
+
     // clear previous interval
     clearInterval(this.interval);
 

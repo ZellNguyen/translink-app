@@ -18,3 +18,10 @@ export const reportError = err => {
     err
   }
 }
+
+export const load = isLoading => {
+  return {
+    type: 'LOAD_IN_PROGRESS',
+    isLoading
+  }
+}

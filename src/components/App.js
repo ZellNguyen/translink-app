@@ -5,6 +5,7 @@ import Map from './map';
 import MapController from './map-controller'
 import SearchBox from './searchBox';
 import { connect } from 'react-redux';
+import './spinner.css';
 
 class App extends Component {
   render() {
@@ -13,6 +14,8 @@ class App extends Component {
         <div className="top left" id="searchBox">
           <SearchBox />
           <p>{this.props.err.toString()}</p>
+          <div className={ this.props.isLoading ? ("loader"): ("")}>
+        </div>
         </div>
         <Map /> <MapController />
       </div>
@@ -26,7 +29,8 @@ App.defaultProps = {
 
 const mapStateToProps = state => {
   return {
-    err: state.errorReducer.err
+    err: state.errorReducer.err,
+    isLoading: state.loadingReducer.isLoading
   };
 }
 

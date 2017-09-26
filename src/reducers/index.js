@@ -28,10 +28,21 @@ const errorReducer = (state = {}, action) => {
   return state;
 }
 
+const loadingReducer = (state = {}, action) => {
+  if(action.type == 'LOAD_IN_PROGRESS') {
+    const newState = {...state, isLoading : false};
+    newState.isLoading = action.isLoading;
+    return newState;
+  }
+
+  return state;
+}
+
 const reducers = combineReducers({
   busReducer : busReducer,
   searchReducer: searchReducer,
-  errorReducer: errorReducer
+  errorReducer: errorReducer,
+  loadingReducer: loadingReducer
 })
 
 export const store = createStore(
