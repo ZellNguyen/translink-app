@@ -24,6 +24,7 @@ class MapController extends Component {
     var searchVal = this.props.search;
     console.log(searchVal);
 
+    // Special cases
     if(searchVal == "") return;
     if(searchVal.toLowerCase() == "all") searchVal = "";
 
@@ -50,11 +51,10 @@ class MapController extends Component {
 				const data = res.body;
 				data.forEach(item => {
 					const newMarker = {no: item.VehicleNo, latitude : item.Latitude, longitude : item.Longitude};
-					//console.log(newMarker);
  					busData = [...busData, newMarker];
 				});
 
-        // Dispatch to store
+        // Dispatch bus data to store
 				store.dispatch(updateBus(busData))
 			});
 	}
@@ -63,7 +63,7 @@ class MapController extends Component {
     // clear previous interval
     clearInterval(this.interval);
 
-    // Keep updating every 2 seconds
+    // Keep updating every 2 second
 		this._updateBus();
     this.interval = setInterval(this._updateBus, 2000);
 	}
