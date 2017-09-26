@@ -47,10 +47,9 @@ There may be a case when the app exceeds the restricted amout of requests per da
 ### Register a new API key 
 Go to [Translink Open API](https://developer.translink.ca/). Register and you will receive a new API key.
 
-Copy the API key provided. Open _.env_ file in the _translink-app_ folder. Replace the existing API key:
+Copy the API key provided. Open _.env_ file in the _translink-app_ folder. Replace the existing API key with your new key:
 ```
-REACT_APP_TRANSLINK=XXXXXXXXXX
+REACT_APP_TRANSLINK=YOUR_NEW_KEY
 ```
-with your API key.
 
 Restart the app.
