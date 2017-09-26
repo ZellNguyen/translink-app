@@ -6,7 +6,7 @@ Translink App is a web app that pulls live bus locations from Translink API and 
 ## Dependencies
 The project was developed using these open modules: 
 
-###[React Map GL](https://github.com/uber/react-map-gl)
+### [React Map GL](https://github.com/uber/react-map-gl)
 ```
 npm install --save react-map-gl
 ```
@@ -31,9 +31,11 @@ Open http://localhost:3000 to view it in the browser.
 
 ## How to use
 You can search for active buses on a specific route by searching for a specific route number (e.g. 084, 099, 008, 004, etc.).
+
 ![alt text](eg1.jpg?raw=true)
 
 Alternatively, you can type "all" to display all the buses that are currently active. 
+
 ![alt text](eg2.jpg?raw=true)
 
 ## Trouble Shoot
