@@ -38,6 +38,8 @@ Alternatively, you can type "all" to display all the buses that are currently ac
 
 ![alt text](eg2.jpg?raw=true)
 
+You can also hover on the bus icon to see the vehicle number.
+
 ## Troubleshoot
 
 ### Error: Not found
