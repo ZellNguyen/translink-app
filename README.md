@@ -38,7 +38,7 @@ Alternatively, you can type "all" to display all the buses that are currently ac
 
 This happens when you search for an invalid route number or a route number that is currently inactive. 
 
-* _	Database connection error_
+* _Database connection error_
 
 There may be a case when the app exceeds the restricted amout of requests per day (1000 requests) and result in a 403 HTTP response. In that case, you can either wait until the next day or register a new API key for the app. 
 
