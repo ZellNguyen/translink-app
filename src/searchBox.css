@@ -1,0 +1,20 @@
+form input {
+  width: 40vw;
+  height: 50px;
+  padding: 0;
+  border: 0 none;
+}
+
+#submit {
+  width: 120px;
+  background: #777777;
+  border: 0 none;
+  color: white;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+#textbox {
+  padding-left: 30px;
+  font-size: 12pt;
+}
