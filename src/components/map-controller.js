@@ -41,6 +41,7 @@ class MapController extends Component {
 			.query({ routeNo : searchVal })
 			.type('application/json')
 			.accept('application/json')
+      .buffer(true)
 			.end((err, res) => {
         // Remove spinner
         store.dispatch(load(false));
