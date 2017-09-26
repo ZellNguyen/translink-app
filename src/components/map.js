@@ -46,7 +46,8 @@ class Map extends Component {
 	          mapboxApiAccessToken={MAP_TOKEN}
 						onViewportChange={this._onViewportChange}>
 
-						{this.props.buses.length > 0 &&
+						{// Display bus locations
+							this.props.buses.length > 0 &&
 							this.props.buses.map( (bus) => (
 							<MapPin key={bus.no} no={bus.no} latitude={bus.latitude} longitude={bus.longitude}/>
 						))}
