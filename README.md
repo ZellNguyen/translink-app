@@ -5,15 +5,16 @@ Translink App is a web app that pulls live bus locations from Translink API and 
 
 ## Dependencies
 The project was developed using these open modules: 
-* [React Map GL](https://github.com/uber/react-map-gl)
+
+###[React Map GL](https://github.com/uber/react-map-gl)
 ```
 npm install --save react-map-gl
 ```
-* [React Redux](https://github.com/reactjs/react-redux)
+### [React Redux](https://github.com/reactjs/react-redux)
 ```
 npm install --save react-redux
 ```
-* [React SuperAgent](https://visionmedia.github.io/superagent/)
+### [React SuperAgent](https://visionmedia.github.io/superagent/)
 ```
 npm install superagent
 ```
@@ -34,11 +35,12 @@ You can search for active buses on a specific route by searching for a specific 
 Alternatively, you can type "all" to display all the buses that are currently active. 
 
 ## Trouble Shoot
-* _ERROR: NOT FOUND_
+
+### ERROR: NOT FOUND
 
 This happens when you search for an invalid route number or a route number that is currently inactive. 
 
-* _Database connection error_
+### Database connection error
 
 There may be a case when the app exceeds the restricted amout of requests per day (1000 requests) and result in a 403 HTTP response. In that case, you can either wait until the next day or register a new API key for the app. 
 
