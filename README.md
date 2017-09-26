@@ -38,7 +38,7 @@ Alternatively, you can type "all" to display all the buses that are currently ac
 
 ![alt text](eg2.jpg?raw=true)
 
-## Trouble Shoot
+## Troubleshoot
 
 ### Error: Not found
 
