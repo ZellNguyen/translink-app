@@ -48,7 +48,7 @@ This happens when you search for an invalid route number or a route number that 
 
 ### Connection Error
 
-Translink API sometimes responds with an empty res.body object. In that case, the app throws a connection error. 
+Translink API sometimes responds with an empty res.body object. In that case, the app throws a connection error. Just simply refresh the page or try a new search.
 
 ### 403 HTTP Response
 
