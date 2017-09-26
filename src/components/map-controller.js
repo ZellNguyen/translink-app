@@ -25,8 +25,13 @@ class MapController extends Component {
     console.log(searchVal);
 
     // Special cases
-    if(searchVal == "") return;
-    if(searchVal.toLowerCase() == "all") searchVal = "";
+    if(searchVal == "") { // Empty search value
+      store.dispatch(updateBus([]));
+      store.dispatch(load(false));
+      return;
+    }
+
+    if(searchVal.toLowerCase() == "all") searchVal = ""; // Search all buses
 
 		const proxyurl = "https://cors-anywhere.herokuapp.com/"; //  Fix No ‘Access-Control-Allow-Origin’ error
 		const url = `http://api.translink.ca/rttiapi/v1/buses`;
