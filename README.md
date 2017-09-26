@@ -42,7 +42,7 @@ Alternatively, you can type "all" to display all the buses that are currently ac
 
 ### Error: Not found
 
-This happens when you search for an invalid route number or a route number that is currently inactive. 
+This happens when you search for an invalid route number or a route number that is currently inactive. Please make sure your search is valid.
 
 ### 403 HTTP Response
 
