@@ -65,6 +65,7 @@ class MapController extends Component {
   				});
         } catch(err) {
           store.dispatch(reportError("Connection Error"));
+          console.log(err);
           return;
         }
 
