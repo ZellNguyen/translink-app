@@ -14,8 +14,7 @@ class App extends Component {
         <div className="top left" id="searchBox">
           <SearchBox />
           <p>{this.props.err.toString()}</p>
-          <div className={ this.props.isLoading ? ("loader"): ("")}>
-        </div>
+          <div className={ this.props.isLoading ? ("loader"): ("")}></div>
         </div>
         <Map /> <MapController />
       </div>
