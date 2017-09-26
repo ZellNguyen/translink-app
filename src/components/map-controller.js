@@ -52,11 +52,16 @@ class MapController extends Component {
         store.dispatch(reportError(""));
 
 				var busData = [];
-				const data = res.body;
-				data.forEach(item => {
-					const newMarker = {no: item.VehicleNo, latitude : item.Latitude, longitude : item.Longitude};
- 					busData = [...busData, newMarker];
-				});
+        try {
+  				const data = res.body;
+  				data.forEach(item => {
+  					const newMarker = {no: item.VehicleNo, latitude : item.Latitude, longitude : item.Longitude};
+   					busData = [...busData, newMarker];
+  				});
+        } catch(err) {
+          store.dispatch(reportError("Connection Error"));
+          return;
+        }
 
         // Dispatch bus data to store
 				store.dispatch(updateBus(busData))

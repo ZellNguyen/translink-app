@@ -46,6 +46,10 @@ You can also hover on the bus icon to see the vehicle number.
 
 This happens when you search for an invalid route number or a route number that is currently inactive. Please make sure your search is valid.
 
+### Connection Error
+
+Translink API sometimes responds with an empty res.body object. In that case, the app throws a connection error. 
+
 ### 403 HTTP Response
 
 There may be a case when the app exceeds the restricted amout of requests per day (1000 requests) and result in a 403 HTTP response. In that case, you can either wait until the next day or register a new API key for the app. 
