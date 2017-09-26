@@ -73,6 +73,6 @@ Restart the app.
 * **Translink API:** Translink only refreshes their data every 2.5 minutes. Therefore, I decided to update the live locations with the same frequency. There is a bug when pulling data from Translink API: the response body cannot be parsed into valid JSON file when requesting with specific vehicle numbers, e.g. http://api.translink.ca/rttiapi/v1/buses/7196?apikey=[APIKey].
 
 ### Was there anything you found specifically challenging or time consuming?
-Getting used to react-redux at the beginning was challenging. It took me a couple hours to fully understand its documentation and how to use it appropriately in my app. However, once I got familiar with it, it became very easy and fast to work with. It helps create a simple but very pretty pattern that lets me speed up the state/data management process. Particularly, it helps my code avoid the _Spagetti_ situations.
+Getting used to react-redux at the beginning was challenging. It took me a couple hours to fully understand its documentation and how to use it appropriately in my app. However, once I got familiar with it, it became very easy and fast to work with. It helps create a simple but very pretty pattern that lets me speed up the state/data management process. 
 
 
