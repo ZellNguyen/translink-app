@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { store } from './reducers';
+import { store } from '../reducers';
 import Map from './map';
 import request from 'superagent';
-import { updateBus, reportError } from './actions';
+import { updateBus, reportError } from '../actions';
 import { connect } from 'react-redux';
 
 const TRANSLINK_KEY = process.env.REACT_APP_TRANSLINK;

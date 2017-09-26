@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MapGL, { Marker } from 'react-map-gl';
-import marker from './map-marker.svg';
+import marker from '../images/map-marker.svg';
 
 class MapPin extends Component {
   constructor(props) {

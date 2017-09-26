@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { store } from './reducers'
-import { submitSearch } from './actions';
+import { store } from '../reducers'
+import { submitSearch } from '../actions';
 import './searchBox.css'
 
 class SearchBox extends Component {
